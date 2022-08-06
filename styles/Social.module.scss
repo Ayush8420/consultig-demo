@@ -1,0 +1,19 @@
+.social {
+    ul {
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      width: 100%;
+      list-style: none;
+
+      li {
+        font-size: 1.1rem;
+        margin-right: 1em;
+        transition: color 0.2s;
+        color: #aaa;
+
+        &:hover {
+        }
+      }
+    }
+  }

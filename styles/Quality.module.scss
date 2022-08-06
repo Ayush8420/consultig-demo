@@ -1,0 +1,41 @@
+.quality {
+  padding: 100px var(--margin);
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    .box {
+      position: relative;
+
+      span {
+        position: absolute;
+        font-size: 10rem;
+        font-weight: 800;
+        color: #d0d0d0;
+        z-index: -1;
+        top: -5rem;
+        left: -3rem;
+        pointer-events: none;
+      }
+    }
+    @media screen and (max-width: 1020px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .box span {
+        left: -2rem;
+      }
+    }
+    @media screen and (max-width: 780px) {
+      grid-template-columns: repeat(1, 1fr);
+
+      .box span {
+        left: -1rem;
+        top: -3rem;
+      }
+    }
+  }
+}

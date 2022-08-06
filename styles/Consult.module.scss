@@ -1,0 +1,84 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+  margin-top: 80px;
+  width: 100%;
+  background-image: url("https://the7.io/consulting/wp-content/uploads/sites/67/2020/05/wicked-bg-the7-5.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-dodge;
+  background-color: var(--bg-img);
+
+  font-family: "Poppins", sans-serif;
+  padding-inline: var(--margin);
+
+  h1 {
+    max-width: 900px;
+    text-align: center;
+    font-size: clamp(1.7rem,4vw,2.3rem);
+    color: #fff;
+    font-weight: 600;
+    line-height: 1em;
+    margin-bottom: 50px;
+
+    @media screen and (max-width : 1020px) {
+      text-align: center;
+   }
+  }
+
+  .btns {
+    height: 50px;
+    
+    @media screen and (max-width : 1020px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px; 
+      margin-top: 50px;
+      
+      @media screen and (max-width: 780px) {
+        flex-direction: column;
+      }
+
+
+      button{
+        margin: 0 auto;
+       }
+   }
+
+    button {
+      outline: none;
+      border: none;
+      font-weight: 400;
+      font-size: 1.1rem;
+      padding: 0.8em 1.5em;
+
+      @media screen and (max-width : 1020px) {
+         font-size: 1rem;
+      }
+
+      &:first-child {
+        background-color: var(--primary);
+        margin-right: 20px;
+        @media screen and (max-width : 780px) {
+           margin-right: auto;
+        }
+
+        border-radius: 2px;
+      }
+
+      &:last-child {
+        background-color: #0000;
+        color: var(--primary);
+        position: relative;
+        border: 2px solid var(--primary);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px
+      }
+    }
+  }
+}

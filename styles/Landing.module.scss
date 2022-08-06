@@ -1,0 +1,169 @@
+.landing {
+  display: flow-root;
+  min-height: 100vh;
+  margin-top: 70px;
+  width: 100%;
+  background-image: url("https://the7.io/consulting/wp-content/uploads/sites/67/2020/05/wicked-bg-the7-5.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-dodge;
+  background-color: var(--bg-img);
+
+  font-family: "Poppins", sans-serif;
+  padding-inline: var(--margin);
+
+  .main {
+    margin: 100px 0 50px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1020px) {
+      flex-direction: column-reverse;
+    }
+
+    .left,
+    .right {
+      width: 50%;
+
+      @media screen and (max-width: 1020px) {
+        width: 100%;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        margin-bottom: 50px;
+      }
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      padding-right: var(--margin);
+      h1 {
+        font-size: clamp(1.7rem, 4vw, 2.3rem);
+        color: #fff;
+        font-weight: 400;
+        line-height: 1em;
+
+        @media screen and (max-width: 1020px) {
+          text-align: center;
+        }
+      }
+
+      p {
+        font-size: 1.3rem;
+        color: #fff;
+        font-weight: 400;
+
+        @media screen and (max-width: 1020px) {
+          text-align: center;
+          margin-bottom: 50px;
+        }
+      }
+
+      .btns {
+        height: 50px;
+
+        @media screen and (max-width: 1020px) {
+          display: flex;
+          align-items: center;
+          @media screen and (max-width: 780px) {
+            flex-direction: column;
+          }
+          gap: 20px;
+          justify-content: center;
+
+          button{
+            margin: 0 auto;
+           }
+        }
+
+        button {
+          outline: none;
+          border: none;
+          height: 50px;
+          font-weight: 400;
+          font-size: 1rem;
+
+          &:first-child {
+            background-color: var(--primary);
+            margin-right: 20px;
+            border-radius: 2px;
+            padding: 0.7rem 1em;
+
+            @media screen and (max-width : 780px) {
+              margin-right: auto;
+           }
+          }
+
+          &:last-child {
+            background-color: #0000;
+            color: #fff;
+            position: relative;
+            padding: 0.7rem 0;
+            border-bottom: 2px solid var(--primary);
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: var(--margin);
+
+      .imgs {
+        width: clamp(250px, 90%, 450px);
+        aspect-ratio: 6 / 5;
+        position: relative;
+
+        img {
+          position: absolute;
+          box-shadow: 0 -4px var(--primary);
+
+          &:first-child {
+            width: 70%;
+            border-radius: 0 33%;
+            top: 0;
+            left: 0;
+          }
+          &:last-child {
+            width: 50%;
+            border-radius: 33% 0;
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .qualities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1020px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 780px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    gap: 20px;
+
+    .item {
+      display: flex;
+      span {
+        color: var(--primary);
+        font-size: 27px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      p {
+        margin: 0;
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.tmonial {
+  padding-block: 100px;
+  font-family: "Poppins", sans-serif;
+  background-color: #eee;
+
+  .heading {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    color: #000;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+
+    span {
+      position: relative;
+
+      b {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 5px;
+        width: 70%;
+        border-radius: 5px;
+        background-color: var(--primary);
+      }
+    }
+  }
+
+  .container{
+      position: relative;
+  }
+
+  .swiper {
+    width: calc(100% - (var(--margin) * 2));
+
+    .slide {
+      background-color: #fff;
+      min-height: 200px;
+      border-radius: 7px;
+      padding: 30px;
+      border: 1px solid #ccc;
+
+      &:active {
+        cursor: grab;
+      }
+
+      .icon {
+        font-size: 2rem;
+        color: #11181c1f;
+        margin-bottom: 20px;
+      }
+
+      .quote {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .by {
+        font-size: 1.1rem;
+        color: #000;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+
+      .desig {
+        font-size: 0.8rem;
+        color: #666;
+      }
+    }
+  }
+
+  .nextBtn,
+  .prevBtn {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+
+    svg {
+      color: #000;
+      font-size: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      background-color: var(--primary-hover);
+    }
+  }
+
+  .nextBtn {
+    right: calc(var(--margin) - 25px);
+  }
+
+  .prevBtn {
+    left: calc(var(--margin) - 25px);
+  }
+}
