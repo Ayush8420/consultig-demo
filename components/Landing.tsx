@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 import { AiOutlineRight } from "react-icons/ai";
 import { FaComments, FaGripHorizontal, FaHandshake, FaIdCard } from "react-icons/fa";
@@ -60,7 +61,6 @@ const Landing: FC = () => {
                         <motion.div 
                         variants={qualitiesVarient}
                         initial="hidden"
-                        // animate="visible"
                         whileInView="visible"
                         viewport={{once : true}}
                         transition={{delay : i * 0.2+ 0.5}}
